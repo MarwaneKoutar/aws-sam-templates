@@ -21,6 +21,8 @@ Resources:
         # handles all methods of the REST API
         Api:
           Type: HttpApi
+    Metadata:
+      BuildMethod: makefile
 
 # print API endpoint and name of database table
 Outputs:
