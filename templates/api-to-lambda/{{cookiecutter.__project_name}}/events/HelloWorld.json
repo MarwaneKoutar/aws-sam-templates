@@ -1,0 +1,9 @@
+{
+  "httpMethod": "GET",
+  "path": "/",
+  "queryStringParameters": {},
+  "headers": {
+    "Accept": "application/json"
+  },
+  "documentation": "Simulates a basic API Gateway GET request for testing the HelloWorld Lambda function."
+}
