@@ -1,4 +1,4 @@
-# My AWS SAM Templates
+# AWS SAM Templates
 
 This repository contains a collection of AWS SAM (Serverless Application Model) templates for different use cases.
 
