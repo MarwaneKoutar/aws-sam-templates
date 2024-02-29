@@ -14,18 +14,24 @@ Globals:
 
 Resources:
   # Lambda function
-  HelloWorld:
+  S3ToLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
       Events:
-        # handles all methods of the REST API
-        Api:
-          Type: HttpApi
+        S3Event:
+          Type: S3
+          Properties:
+            Bucket: !Ref MyS3Bucket
+            Events: s3:ObjectCreated:*
     Metadata:
       BuildMethod: makefile
 
-# print API endpoint
+  # S3 Bucket
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+
+# Print the S3 Bucket ARN
 Outputs:
-  SwiftAPIEndpoint:
-    Description: "API Gateway endpoint URL for your application"
-    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+  S3Bucket:
+    Description: "S3 Bucket ARN"
+    Value: !GetAtt MyS3Bucket.Arn

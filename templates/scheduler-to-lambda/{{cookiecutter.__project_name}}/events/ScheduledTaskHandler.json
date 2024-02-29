@@ -1,0 +1,11 @@
+{
+  "source": "aws.events",
+  "detail-type": "Scheduled Event",
+  "detail": {},
+  "time": "2022-02-28T00:00:00Z",
+  "region": "us-east-1",
+  "resources": [
+    "arn:aws:events:us-east-1:123456789012:rule/YourScheduledRuleName"
+  ],
+  "detail-version": "1.0"
+}
