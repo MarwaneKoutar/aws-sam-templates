@@ -29,7 +29,7 @@ Resources:
         MySQSEvent:
           Type: SQS
           Properties:
-            Queue: !Ref MyQueue
+            Queue: !GetAtt MyQueue.Arn
     Metadata:
       BuildMethod: makefile
 
