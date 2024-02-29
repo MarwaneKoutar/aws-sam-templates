@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template for {{ cookiecutter.project_name }}
+
+Globals:
+  Function:
+    Timeout: 60
+    CodeUri: .
+    Handler: swift.bootstrap
+    Runtime: provided.al2
+    MemorySize: 512
+    Architectures:
+      - {{ cookiecutter.__architecture }}
+
+Resources:
+  # SQS Queue
+  MyQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: {{ cookiecutter._sqs_queue_name }}
+      VisibilityTimeout: 60
+
+  # Lambda function
+  SQSQueueListener:
+    Type: AWS::Serverless::Function
+    Properties:
+      Events:
+        # SQS trigger event
+        MySQSEvent:
+          Type: SQS
+          Properties:
+            Queue: !Ref MyQueue
+    Metadata:
+      BuildMethod: makefile
+
+# Print the SQS queue URL
+Outputs:
+  SQSQueueURL:
+    Description: "URL of the SQS Queue"
+    Value: !GetAtt MyQueue.QueueUrl
