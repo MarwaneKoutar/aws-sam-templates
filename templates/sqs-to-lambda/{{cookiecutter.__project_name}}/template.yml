@@ -17,7 +17,7 @@ Resources:
   MyQueue:
     Type: AWS::SQS::Queue
     Properties:
-      QueueName: {{ cookiecutter._sqs_queue_name }}
+      QueueName: {{ cookiecutter.__sqs_queue_name }}
       VisibilityTimeout: 60
 
   # Lambda function

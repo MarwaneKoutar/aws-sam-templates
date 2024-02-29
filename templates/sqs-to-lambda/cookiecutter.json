@@ -1,7 +1,7 @@
 {
   "project_name": "Swift SQS to Lambda",
   "sqs_queue_name": "swift-sqs-to-lambda",
-  "_sqs_queue_name": "{{ cookiecutter.sqs_queue_name|lower|replace(' ', '-') }}",
+  "__sqs_queue_name": "{{ cookiecutter.sqs_queue_name|lower|replace(' ', '-') }}",
   "__project_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "__architecture": "{{ 'x86_64'|architecture }}",
   "_copy_without_render": [".gitignore"],
