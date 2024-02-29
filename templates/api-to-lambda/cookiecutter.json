@@ -4,9 +4,9 @@
   "__architecture": "{{ 'x86_64'|architecture }}",
   "_copy_without_render": [".gitignore"],
   "_template_name": "API to Lambda",
-  "_runtime": "Swift 5.9.2",
-  "_swift_tools_version": "5.9.2",
-  "_aws_swift_sdk_version": "0.36.1",
+  "_runtime": "Swift 5.9.0",
+  "_swift_tools_version": "5.9.0",
+  "_aws_swift_sdk_version": "0.37.0",
   "__project_dir": "{{ 'Change this path'|get_abs_path }}/{{ cookiecutter.__project_name }}",
   "_extensions": [
     "local_extensions.architecture",
