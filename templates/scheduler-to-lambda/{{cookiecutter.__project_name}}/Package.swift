@@ -12,14 +12,17 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/swift-server/swift-aws-lambda-runtime", branch: "main"),
         .package(url: "https://github.com/swift-server/swift-aws-lambda-events", branch: "main"),
-        .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "{{ cookiecutter._aws_swift_sdk_version }}")
+        // Uncomment the following line to use the AWS SDK for Swift in your Lambda function aswell as the line in the targets section
+        // .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "{{ cookiecutter._aws_swift_sdk_version }}")
     ],
     targets: [
         .executableTarget(
             name: "ScheduledTaskHandler",
             dependencies: [
                 .product(name: "AWSLambdaRuntime",package: "swift-aws-lambda-runtime"),
-                .product(name: "AWSLambdaEvents", package: "swift-aws-lambda-events")
+                .product(name: "AWSLambdaEvents",package: "swift-aws-lambda-events"),
+                // Uncomment the following line to use the AWS SDK for Swift in your Lambda function aswell as the line in the dependencies section
+                // .product(name: "AWSSDKSwift",package: "aws-sdk-swift"),
             ]
         )
     ]

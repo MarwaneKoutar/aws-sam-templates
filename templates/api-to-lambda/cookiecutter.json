@@ -1,12 +1,12 @@
 {
-  "project_name": "Swift Hello World API to Lambda",
+  "project_name": "Hello World API to Swift Lambda",
   "__project_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "__architecture": "{{ 'x86_64'|architecture }}",
   "_copy_without_render": [".gitignore"],
   "_template_name": "API to Lambda",
-  "_runtime": "Swift 5.8",
-  "_swift_tools_version": "5.8",
-  "_aws_swift_sdk_version": "0.32.0",
+  "_runtime": "Swift 5.9.2",
+  "_swift_tools_version": "5.9.2",
+  "_aws_swift_sdk_version": "0.36.1",
   "__project_dir": "{{ 'Change this path'|get_abs_path }}/{{ cookiecutter.__project_name }}",
   "_extensions": [
     "local_extensions.architecture",

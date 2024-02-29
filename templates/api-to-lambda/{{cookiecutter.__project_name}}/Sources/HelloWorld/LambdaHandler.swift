@@ -1,23 +1,22 @@
 // Import the packages required by our function
 import AWSLambdaRuntime
+import AWSLambdaEvents
 
-// Define the request structure
-struct Request: Codable {
-    let rawPath: String
-}
-
-// Define the response structure
-struct Response: Codable {
-    let body: String
-}
+// Documentation:
+// For more information on Swift AWS Lambda Runtime, visit:
+// https://github.com/swift-server/swift-aws-lambda-runtime/tree/main
+//
+// For details about Swift AWS Lambda Events, refer to:
+// https://github.com/swift-server/swift-aws-lambda-events/tree/main
 
 // Entry point for the Lambda function
 @main
 struct HelloWorld: SimpleLambdaHandler {
-
+    
     // Lambda Function handler
-    func handle(_ event: Request, context: LambdaContext) async throws -> Response {
+    func handle(_ event: APIGatewayV2Request, context: LambdaContext) async throws -> APIGatewayV2Response {
 
-        return Response(body: "Hello, world!")
+        // Process the API Gateway event
+        return APIGatewayV2Response(statusCode: HTTPResponseStatus(code: 200), body: "Hello from AWS!")
     }
 }

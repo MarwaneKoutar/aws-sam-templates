@@ -2,6 +2,13 @@
 import AWSLambdaEvents
 import AWSLambdaRuntime
 
+// Documentation:
+// For more information on Swift AWS Lambda Runtime, visit:
+// https://github.com/swift-server/swift-aws-lambda-runtime/tree/main
+//
+// For details about Swift AWS Lambda Events, refer to:
+// https://github.com/swift-server/swift-aws-lambda-events/tree/main
+
 // Entry point for the Lambda function
 @main
 struct SQSQueueListener: SimpleLambdaHandler {
