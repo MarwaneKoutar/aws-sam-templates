@@ -22,6 +22,7 @@ let package = Package(
                 .product(name: "AWSLambdaRuntime",package: "swift-aws-lambda-runtime"),
                 .product(name: "AWSLambdaEvents",package: "swift-aws-lambda-events"),
                 // Uncomment the following line to use the AWS SDK for Swift in your Lambda function aswell as the line in the dependencies section
+                // Make sure to change the name of the product to the one you want to use
                 // .product(name: "AWSSDKSwift",package: "aws-sdk-swift"),
             ]
         )
