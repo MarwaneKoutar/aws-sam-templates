@@ -35,6 +35,6 @@ Resources:
 
 # Print the SQS queue URL
 Outputs:
-  SQSQueueURL:
-    Description: "URL of the SQS Queue"
-    Value: !GetAtt MyQueue.QueueUrl
+  SQSQueueARN:
+    Description: "ARN of the SQS Queue"
+    Value: !GetAtt MyQueue.Arn

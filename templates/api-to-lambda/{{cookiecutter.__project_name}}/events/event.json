@@ -45,7 +45,7 @@
     "domainName": "id.execute-api.us-east-1.amazonaws.com",
     "domainPrefix": "id",
     "http": {
-      "method": "POST",
+      "method": "GET",
       "path": "/path/to/resource",
       "protocol": "HTTP/1.1",
       "sourceIp": "192.168.0.1/32",
