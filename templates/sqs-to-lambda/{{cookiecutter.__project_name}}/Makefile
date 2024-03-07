@@ -1,4 +1,4 @@
-BUILD_DIR := $(PWD)/.aws-sam/build
+BUILD_DIR := {{ cookiecutter.__project_dir }}/.aws-sam/build
 BUILD_FLAG := $(BUILD_DIR)/build_complete.flag
 DOCKER_IMAGE := swift-lambda-builder-workaround
 
