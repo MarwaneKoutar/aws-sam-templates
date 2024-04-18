@@ -3,22 +3,26 @@
     "api-to-lambda": {
       "path": "./templates/api-to-lambda",
       "title": "API to Lambda",
-      "description": "API Gateway to Lambda function integration"
+      "description": "API Gateway to Lambda function integration",
+      "image": "https://digital-tailoring.be/api.png"
     },
     "sqs-to-lambda": {
       "path": "./templates/sqs-to-lambda",
       "title": "SQS to Lambda",
-      "description": "AWS SQS to Lambda function integration"
+      "description": "AWS SQS to Lambda function integration",
+      "image": "https://digital-tailoring.be/sqs.png"
     },
     "s3-to-lambda": {
       "path": "./templates/s3-to-lambda",
       "title": "S3 to Lambda",
-      "description": "AWS S3 to Lambda function integration"
+      "description": "AWS S3 to Lambda function integration",
+      "image": "https://digital-tailoring.be/s3.png"
     },
     "scheduler-to-lambda": {
       "path": "./templates/scheduler-to-lambda",
       "title": "Scheduler to Lambda",
-      "description": "Scheduled events to Lambda function integration"
+      "description": "Scheduled events to Lambda function integration",
+      "image": "https://digital-tailoring.be/scheduler.png"
     }
   }
 }
