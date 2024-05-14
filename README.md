@@ -30,7 +30,3 @@ Each template contains its README with detailed instructions on how to use it, a
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 - [Docker](https://www.docker.com/products/docker-desktop/)
-
-## Under Construction
-
-⚠️ This repository is currently under construction. While the templates provided here offer a good starting point, there may be room for improvements and optimizations. I appreciate your patience as I continue to enhance and refine these templates. ⚠️
